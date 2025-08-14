@@ -568,12 +568,13 @@ a {
 
 .w3-bar {
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
+   
 }
 
 .w3-center .w3-bar {
     display: inline-block;
-    width: auto
+    width: auto;
 }
 
 .w3-bar .w3-bar-item {
@@ -636,7 +637,8 @@ a {
 .w3-bar:after {
     content: "";
     display: table;
-    clear: both
+    clear: both;
+    
 }
 
 .w3-col,
@@ -958,7 +960,8 @@ a {
 }
 
 .w3-top {
-    top: 0
+    top: 0;
+    background-color: yellow;
 }
 
 .w3-bottom {
@@ -1090,7 +1093,8 @@ a {
 .w3-row-padding>.w3-threequarter,
 .w3-row-padding>.w3-quarter,
 .w3-row-padding>.w3-col {
-    padding: 0 8px
+    padding:10px 10px 10px 10px;
+  
 }
 
 .w3-container,
@@ -1383,7 +1387,8 @@ a {
 }
 
 .w3-right-align {
-    text-align: right !important
+    text-align: right !important;
+    vertical-align: bottom;
 }
 
 .w3-justify {
@@ -1518,7 +1523,8 @@ a {
 }
 
 .w3-right {
-    float: right !important
+    float: right !important;
+    vertical-align: bottom;
 }
 
 .w3-button:hover {
