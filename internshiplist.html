@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .logo {
+      height: 60px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+    .card-header {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .dates {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+    .dates span {
+      display: block;
+      margin: 4px 0;
+    }
+    .apply-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 16px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+    .apply-btn:hover {
+      background: #0056b3;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Company Internship Calendar</h1>
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/tcs.jpg" alt="TechCorp Logo" class="logo">
+        <div class="card-header">Tata Consultancy Services (TCS) Internship</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> Varies throughout the year</span>
+          <span><strong>Deadline:</strong> Varies throughout the year</span>
+        </div>
+        <a href="https://www.tcs.com/careers/india/internship" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/Amazon.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">Amazon WoW</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong>  November/December 2025</span>
+          <span><strong>Deadline:</strong> NA</span>
+          <span><strong>Eligibility:</strong> Only for Female Students</span>
+        </div>
+        <a href="https://amazon.jobs/content/en/career-programs/university/women-of-the-world" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/companies/Flipkart .png" alt="AlphaTech Logo" class="logo">
+        <div class="card-header">Flipkart Grid</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> May 2025</span>
+          <span><strong>Deadline:</strong> June 2025 (tentative)</span>
+        </div>
+        <a href="https://www.flipkartcareers.com/flipkart/#!/grid" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/IBM.png" alt="TechCorp Logo" class="logo">
+        <div class="card-header">IBM India Internship Program</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> Varies depending on the specific program</span>
+          <span><strong>Deadline:</strong> Varies depending on the specific program</span>
+        </div>
+        <a href="https://www.ibm.com/in-en/careers/search?field_keyword_18%5B0%5D=Internship" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/walmart.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">Walmart Global Tech Internship</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong>  July 2025</span>
+          <span><strong>Deadline:</strong> August 2025</span>
+        </div>
+        <a href="https://careers.walmart.com/students" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/companies/morgan.png" alt="AlphaTech Logo" class="logo">
+        <div class="card-header">Morgan Stanley Internship Program</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> November/December 2025</span>
+          <span><strong>Deadline:</strong> January 2026</span>
+        </div>
+        <a href="https://www.morganstanley.com/people-opportunities/students-graduates" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/Microsoft.png" alt="TechCorp Logo" class="logo">
+        <div class="card-header">Microsoft Internships</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> May/June 2025</span>
+          <span><strong>Deadline:</strong> NA</span>
+          <span><strong>Eligibility:</strong> 2nd/3rd Year Students Only</span>
+        </div>
+        <a href="https://jobs.careers.microsoft.com/global/en/job/1800043/Explore-Program-Internship-Opportunities%3A-Second-Year-Students%2C-India" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/Infosys.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">Infosys HackWithInfy</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong>   March 2025</span>
+          <span><strong>Deadline:</strong> April 2025</span>
+        </div>
+        <a href="https://www.infosys.com/careers/hackwithinfy.html" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/companies/google summer.png" alt="AlphaTech Logo" class="logo">
+        <div class="card-header">Google Summer of Code (GSoC)</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> February 2025</span>
+          <span><strong>Deadline:</strong> March 2025</span>
+        </div>
+        <a href="https://summerofcode.withgoogle.com/" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/uber hacktag.png" alt="TechCorp Logo" class="logo">
+        <div class="card-header">Uber HackTag</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> January 2025</span>
+          <span><strong>Deadline:</strong> February 2025</span>
+        </div>
+        <a href="" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/gold.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">Goldman Sachs Campus Hiring Program</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong>   July 2025</span>
+          <span><strong>Deadline:</strong> NA</span>
+        </div>
+        <a href="https://www.goldmansachs.com/careers/students/programs-and-internships" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/companies/bnt.png" alt="AlphaTech Logo" class="logo">
+        <div class="card-header">Boston Nex Tech (BNT)</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> Jan 2025</span>
+          <span><strong>Deadline:</strong> March 2025</span>
+        </div>
+        <a href="https://bostonnextech.com/internship/" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/hcl.png" alt="TechCorp Logo" class="logo">
+        <div class="card-header">HCL Techbee</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> NA</span>
+          <span><strong>Deadline:</strong> NA</span>
+          <span><strong> Eligibility:</strong>  Students who passed 12th grade in 2023 or 2024</span>
+        </div>
+        <a href="https://registrations.hcltechbee.com/" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/cognizant.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">Cognizant Fusion</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong>   June 2025</span>
+          <span><strong>Deadline:</strong> NA</span>
+        </div>
+        <a href="https://careers.cognizant.com/us-en/fusion/" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/companies/wipro.png" alt="AlphaTech Logo" class="logo">
+        <div class="card-header">Wipro Internship Program</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> Varies depending on the specific program</span>
+          <span><strong>Deadline:</strong> Varies depending on the specific program</span>
+        </div>
+        <a href="https://careers.wipro.com/" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/cisco.png" alt="TechCorp Logo" class="logo">
+        <div class="card-header">Cisco Ideathon</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> June 2025</span>
+          <span><strong>Deadline:</strong> July 2025</span>
+        </div>
+        <a href="https://www.cisco.com/c/m/en_in/customer-experience-academy.html" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/juspay.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">Juspay Hiring Challenge</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong>   March 2025</span>
+          <span><strong>Deadline:</strong> NA</span>
+          <span><strong>Eligibility:</strong> 2nd/3rd Year Students Only</span>
+        </div>
+        <a href="https://juspay.io/careers" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/companies/de.png" alt="AlphaTech Logo" class="logo">
+        <div class="card-header">D. E.Shaw Internship Program</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> February 2025</span>
+          <span><strong>Deadline:</strong> March 2025</span>
+        </div>
+        <a href="https://www.deshawindia.com/careers/Internships" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/EY.png" alt="TechCorp Logo" class="logo">
+        <div class="card-header">EY Technathon</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> April 2025</span>
+          <span><strong>Deadline:</strong> May 2025</span>
+        </div>
+        <a href="https://www.ey.com/en%20in/techathon-5" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/ge.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">GE Vernova Digital Technology Leadership Program Internship</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong>   To be announced</span>
+          <span><strong>Deadline:</strong> To be announced</span>
+        </div>
+        <a href="https://jobs.gecareers.com/" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="images/companies/Qual.png" alt="AlphaTech Logo" class="logo">
+        <div class="card-header">Qualcomm India Internship Program</div>
+        <div class="dates">
+          <span><strong>Opening Date:</strong> NA</span>
+          <span><strong>Deadline:</strong> NA</span>
+          <span><strong>Summer Internship:</strong>  May - July 2025</span>
+          <span><strong>6-Months Internship:</strong> January - June 2025</span>
+
+        </div>
+        <a href="https://www.qualcomm.com/company/careers/internships-and-early-in-career-opportunities/india" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="images/companies/Oracle.png" alt="TechCorp Logo" class="logo">
+        <div class="card-header">Oracle</div>
+        <div class="dates">
+          <span><strong>Course:</strong> Student-Grads Internship Program</span>
+        </div>
+        <a href="https://www.oracle.com/careers/students-grads/internships/" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="images/companies/dell.png" alt="InnoSoft Logo" class="logo">
+        <div class="card-header">DELL</div>
+        <div class="dates">
+          <span><strong>Course:</strong>    IT Intern Program</span>
+        </div>
+        <a href="https://jobs.dell.com/en/internships" class="apply-btn" target="_blank">Apply Now</a>
+      </div>
+      <!-- Card 3 -->
+
+    </div>
+  </div>
+</body>
+</html>
