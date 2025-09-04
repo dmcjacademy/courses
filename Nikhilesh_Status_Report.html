@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Google Sheet Data</title>
-  <style>
+   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -18,10 +18,17 @@
       text-align: left;
     }
     th {
-      background-color: #f2f2f2;
+      background-color: #0073e6;
+      color: white;
     }
     tr:nth-child(even) {
       background-color: #fafafa;
+    }
+    .module-row {
+      background-color: #fff8b3; /* light yellow */
+    }
+    .review-row {
+      background-color: #c6f6c6; /* light green */
     }
   </style>
 </head>
@@ -38,18 +45,18 @@
     async function loadData() {
       const response = await fetch(sheetUrl);
       const csvText = await response.text();
-        alert("Hi");
+
       const rows = csvText.trim().split("\n").map(r => r.split(","));
 
       const table = document.getElementById("dataGrid");
       const thead = table.querySelector("thead");
       const tbody = table.querySelector("tbody");
 
-      // Clear any existing data
+      // Clear old data
       thead.innerHTML = "";
       tbody.innerHTML = "";
 
-      // Create header row
+      // Create header
       const headerRow = document.createElement("tr");
       rows[0].forEach(cell => {
         const th = document.createElement("th");
@@ -61,6 +68,16 @@
       // Create data rows
       rows.slice(1).forEach(row => {
         const tr = document.createElement("tr");
+
+        // Check if row contains "Module" or "Review"
+        const rowText = row.join(" ").toLowerCase();
+        if (rowText.includes("module")) {
+          tr.classList.add("module-row");
+        }
+        if (rowText.includes("review")) {
+          tr.classList.add("review-row");
+        }
+
         row.forEach(cell => {
           const td = document.createElement("td");
           td.textContent = cell;
@@ -74,3 +91,4 @@
   </script>
 </body>
 </html>
+
