@@ -42,6 +42,11 @@
     .review-row {
       background-color: #c6f6c6; /* light green */
     }
+    .yes-row
+    {
+      background-color: #06402B; /* dark green */
+      color:#ffffff;
+    }
 
     /* Make table font smaller on narrow screens */
     @media (max-width: 600px) {
@@ -100,6 +105,9 @@
         }
         if (rowText.includes("review")) {
           tr.classList.add("review-row");
+        }
+        if (rowText.includes("Yes")) {
+          tr.classList.add("yes-row");
         }
 
         row.forEach(cell => {
