@@ -101,14 +101,15 @@
 
         // Check if row contains "Module" or "Review"
         const rowText = row.join(" ").toLowerCase();
-        if (rowText.includes("module")) {
-          tr.classList.add("module-row");
-        }
+       
         if (rowText.includes("review")) {
           tr.classList.add("review-row");
         }
         if (rowText.includes("yes")) {
           tr.classList.add("yes-row");
+        }
+         if (rowText.includes("result")) {
+          tr.classList.add("module-row");
         }
 
         row.forEach(cell => {
