@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nikhilesh - Training Progress Tracker</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: auto; /* scroll on small screens */
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 400px; /* prevent table from shrinking too much */
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: left;
+      font-size: 14px;
+      word-break: break-word;
+    }
+    th {
+      background-color: #0073e6;
+      color: white;
+    }
+    tr {
+      background-color: #fafafa;
+    }
+    
+    .module-row {
+      background-color: #fff8b3; /* light yellow */
+    }
+    .review-row {
+      background-color: #c6f6c6; /* light green */
+    }
+    .yes-row
+    {
+      background-color: #77FF33; /* dark green */
+     
+    }
+
+    /* Make table font smaller on narrow screens */
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 12px;
+        padding: 6px;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Name : Nikhilesh | Course : Professional Java Development – Core to Enterprise </h2>
+  <h2>Training Progress Tracker</h2>
+  <table id="dataGrid">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTbx9e0Db7rzrq7VNjhLCdiJwlIHuV2eternaSp6p0rqfTJLvtAkdJzPoVbk6FlAT96pzIIu506F7Au/pub?output=csv";
+
+    async function loadData() {
+      const response = await fetch(sheetUrl);
+      const csvText = await response.text();
+
+      const rows = csvText.trim().split("\n").map(r => r.split(","));
+
+      const table = document.getElementById("dataGrid");
+      const thead = table.querySelector("thead");
+      const tbody = table.querySelector("tbody");
+
+      // Clear old data
+      thead.innerHTML = "";
+      tbody.innerHTML = "";
+
+      // Create header
+      const headerRow = document.createElement("tr");
+      rows[0].forEach(cell => {
+        const th = document.createElement("th");
+        th.textContent = cell;
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+
+      // Create data rows
+      rows.slice(1).forEach(row => {
+        const tr = document.createElement("tr");
+
+        // Check if row contains "Module" or "Review"
+        const rowText = row.join(" ").toLowerCase();
+       
+        if (rowText.includes("review")) {
+          tr.classList.add("review-row");
+        }
+        if (rowText.includes("yes")) {
+          tr.classList.add("yes-row");
+        }
+         if (rowText.includes("result")) {
+          tr.classList.add("module-row");
+        }
+
+        row.forEach(cell => {
+          const td = document.createElement("td");
+          td.textContent = cell;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
+
+
 
