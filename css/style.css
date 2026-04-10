@@ -182,8 +182,8 @@ fieldset {
 
 #trainers img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  height: 250px;       /* fixed height */
+  object-fit: cover;   /* keeps image proportion, crops if needed */
 }
 
 legend {
