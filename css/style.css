@@ -180,6 +180,12 @@ fieldset {
     padding: .35em .625em .75em
 }
 
+#trainers img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 legend {
     color: inherit;
     display: table;
